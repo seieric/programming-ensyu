@@ -84,6 +84,6 @@ void calc_and_print(double *nums, int len, char *label)
         double dist = nums[i] - mean;
         square_sum += dist * dist;
     }
-    stdev = sqrt(square_sum);
+    stdev = sqrt(square_sum / len);
     printf("%s : (max,min,mean,stdev) = (%lf, %lf, %lf, %lf)\n", label, max, min, mean, stdev);
 }
